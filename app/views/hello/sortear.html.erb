@@ -1,0 +1,9 @@
+<h1>Era segreeeedo</h1>
+
+<% @resultado.each do |quem_tirou, quem_foi_tirado| %>
+  <p>
+    <%= content_tag :strong, quem_tirou.nome %> 
+    tirou 
+    <%= content_tag :strong, quem_foi_tirado.nome %>
+  </p>
+<% end %>

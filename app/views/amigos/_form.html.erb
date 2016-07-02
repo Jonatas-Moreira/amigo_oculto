@@ -1,0 +1,13 @@
+<%= form_for @amigo do |form| %>
+  <p>
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </p>
+  <p>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </p>
+  <p>
+    <%= submit_tag 'Salvar' %>
+  </p>
+<% end %>

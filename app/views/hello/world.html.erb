@@ -1,0 +1,17 @@
+<h1>Hello, <%= @nome %>!</h1>
+
+<%= form_tag '/hello/world', method: :get do %>
+  <%= text_field_tag :nome %>
+  <%= submit_tag 'Enviar' %>
+<% end %>
+
+<%= link_to "Cadastrar um amigo", new_amigo_path %>
+
+<ul>
+  <% @amigos.each do |amigo| %>
+    <li> <%= link_to amigo.nome, edit_amigo_path(amigo) %> 
+       - <%= amigo.email %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Fazer sorteio", 'sortear' %>
