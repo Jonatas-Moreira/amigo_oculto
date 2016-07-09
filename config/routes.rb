@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'hello/sortear'
 
   resources :amigos
+
+  root 'hello#world'
 end
