@@ -36,16 +36,22 @@ e que quando o sorteio for realizado todos receberão seu "papel".
 
 ##  Como instalar
 
-Primeiro é preciso clinar o projeto: `git clone git://github.com/lucasmncastro/amigo_oculto.git`
+Primeiro é preciso clinar o projeto:
+
+    git clone git://github.com/lucasmncastro/amigo_oculto.git
 
 Entre no diretório do projeto e execute o bundle install, para garantir que todas as gems estão instaladas:
 
-`cd amigo_oculto`
-`bundle install`
+    cd amigo_oculto
+    bundle install
 
-Crie as tabelas no banco de dados: `rake db:migrate`
+Crie as tabelas no banco de dados:
 
-Inicie a aplicação: `rails s`
+    rake db:migrate
+
+Inicie a aplicação:
+
+    rails s
 
 ## Contribuidores
 
