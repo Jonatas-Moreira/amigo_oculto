@@ -36,7 +36,7 @@ e que quando o sorteio for realizado todos receberão seu "papel".
 
 ##  Como instalar
 
-Primeiro é preciso clinar o projeto:
+Primeiro é preciso clonar o projeto:
 
     git clone git://github.com/lucasmncastro/amigo_oculto.git
 
@@ -48,6 +48,11 @@ Entre no diretório do projeto e execute o bundle install, para garantir que tod
 Crie as tabelas no banco de dados:
 
     rake db:migrate
+
+Configure as variáveis de ambiente com suas credenciais do Gmail para o envio do resultado do sorteio aos participantes:
+
+    export GMAIL_USERNAME=<seu-email-do-gmail>
+    export GMAIL_PASSWORD=<sua-senha-do-gmail>
 
 Inicie a aplicação:
 
