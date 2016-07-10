@@ -24,4 +24,55 @@ e eficiente sugerido durante o curso pelo Paulo Warisson.
 ## Como funciona(rá)
 
 1. Você cria um sorteio, por exemplo: "Natal da Família". 
-2. Você cadastra os participantes, colocando "Nome e E-mail". Ou, você compartilha o link
+2. Você cadastra os participantes, colocando "Nome e e-mail". Ou, você compartilha o 
+   link em algum lugar, como Whatsapp, para que eles possam se inscrever.
+3. Você clica em "Sortear" e cada participante receberá seu "papel" por email.
+
+Observação: é importante lembrar que só deverá participar quem confirmar seu cadastro
+clicando no email recebido após a inscrição. Isso é para garantir que o email é válido
+e que quando o sorteio for realizado todos receberão seu "papel".
+
+*(rá) porque nem tudo ainda foi feito :)
+
+##  Como instalar
+
+Primeiro é preciso clinar o projeto
+
+`git clone git://github.com/lucasmncastro/amigo_oculto.git`
+
+Entre no diretório do projeto e execute o bundle install, para garantir que todas as gems estão instaladas.
+
+`cd amigo_oculto`
+`bundle install`
+
+Crie as tabelas no banco de dados:
+`rake db:migrate`
+
+Inicie a aplicação:
+
+`rails s`
+
+## Contribuidores
+
+* João Paulo Barros
+* Adriel Lucas da Silva Viana
+* Pedro de Alcantara dos Santos Neto
+* Olivan Teixeira Aires
+* Paulo Warison Lopes dos Santos
+* Djair Carvalho
+* Antonio Emanuel
+* Lucas Lopes
+* Cleiton
+* Álvaro Bacelar de Sousa
+* Wan Souza
+* Luan Pontes
+* Tarciana
+* Wislanildo
+* Ana Catharina Mesquita
+* Angela Pereira
+* Gleydson Rocha
+* Paulo Sérgio Queiroz
+* Ewerton Leal
+* Bruno Soares
+* Livya Castro
+* Rondinele Souza
