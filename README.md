@@ -14,7 +14,7 @@ As vantagens dessa solução:
 1. **O sorteio é online.** Os participantes não precisam estar no mesmo dia e local
 para a realização do sorteio. Na maneira antiga era um problema conseguir 
 reunir todo mundo para fazer o sorteio;                                  
-2. **Você não precisa engulir papel!** Claro que isso é uma brincadeira e que
+2. **Você não precisa engolir papel!** Claro que isso é uma brincadeira e que
 pouquíssimas pessoas fazem isso de fato, mas o sistema envia o resultado de cada 
 participante por email, que já é protegido por senha.
 3. **O ciclo é perfeito.** Não há riscos de alguém "se-tirar" ou de "eu te tirar e 
