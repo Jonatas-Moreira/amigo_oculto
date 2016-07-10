@@ -1,0 +1,27 @@
+<%= form_for(sorteio) do |f| %>
+  <% if sorteio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sorteio.errors.count, "error") %> prohibited this sorteio from being saved:</h2>
+
+      <ul>
+      <% sorteio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descricao %>
+    <%= f.text_field :descricao, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :regras %>
+    <%= f.text_area :regras, class: 'form-control' %>
+  </div>
+
+  <p style="margin-top: 20px">
+    <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+  </p>
+<% end %>

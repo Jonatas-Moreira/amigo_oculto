@@ -1,11 +1,17 @@
 class AmigosController < ApplicationController
   def new
     @amigo = Amigo.new
+    @amigo.sorteio_id = params[:sorteio_id]
   end
 
   def create
-    @amigo = Amigo.create amigo_params
-    redirect_to '/hello/world'
+    @amigo = Amigo.new amigo_params
+    
+    if @amigo.save
+      redirect_to @amigo.sorteio
+    else
+      render :new
+    end
   end
 
   def edit
@@ -21,7 +27,6 @@ class AmigosController < ApplicationController
   private
 
     def amigo_params
-      params.require(:amigo).permit(:nome, :email)
+      params.require(:amigo).permit(:nome, :email, :sorteio_id)
     end
-
 end

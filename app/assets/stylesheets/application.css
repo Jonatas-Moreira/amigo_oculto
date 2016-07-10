@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.conteudo {
+  margin: 20px auto; 
+  width: 800px;
+  border: 1px solid black;
+  padding: 30px;
+  padding-top: 0;
+}
+
+h1.titulo {
+  background: #ccc;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+

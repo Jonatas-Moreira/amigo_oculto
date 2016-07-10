@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <small>Amigo oculto do</small><br />
+  <%= @sorteio.descricao %>
+</h1>
+
+<h4>Regras</h4>
+<p>
+<%= @sorteio.regras %>
+</p>
+
+<%= link_to "Adicionar Amigo", 
+            new_amigo_path(sorteio_id: @sorteio), 
+            class: 'btn btn-primary' %>
+
+<table class="table striped" style="margin-top: 30px">
+  <% @sorteio.amigos.each do |amigo| %>
+  <tr>
+    <td>
+      <%= amigo.nome %>
+    </td>
+    <td>
+      <%= amigo.email %>
+    </td>
+    <td>
+      <%= link_to "Editar", edit_amigo_path(amigo) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<hr />
+
+<%= link_to 'Editar', edit_sorteio_path(@sorteio), class: 'btn btn-default' %> 
+<%= link_to 'Voltar', sorteios_path, class: 'btn btn-default' %>

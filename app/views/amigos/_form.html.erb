@@ -1,13 +1,21 @@
 <%= form_for @amigo do |form| %>
+  <%= @erro %>
+  <%= form.hidden_field :sorteio_id %>
+  <ul>
+  <% @amigo.errors.each do |nome, mensagem| %>
+    <li><%= nome %> <%= mensagem %></li>
+  <% end %>
+  </ul>
+
   <p>
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome, class: 'form-control' %>
   </p>
   <p>
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: 'form-control' %>
   </p>
   <p>
-    <%= submit_tag 'Salvar' %>
+    <%= submit_tag 'Salvar', class: 'btn btn-primary' %>
   </p>
 <% end %>

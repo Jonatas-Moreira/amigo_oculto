@@ -1,11 +1,4 @@
-<h1>Hello, <%= @nome %>!</h1>
-
-<%= form_tag '/hello/world', method: :get do %>
-  <%= text_field_tag :nome %>
-  <%= submit_tag 'Enviar' %>
-<% end %>
-
-<%= link_to "Cadastrar um amigo", new_amigo_path %>
+<%= link_to "Cadastrar um amigo", new_amigo_path, :class => 'btn btn-primary' %>
 
 <ul>
   <% @amigos.each do |amigo| %>
@@ -14,4 +7,4 @@
   <% end %>
 </ul>
 
-<%= link_to "Fazer sorteio", 'sortear' %>
+<%= link_to "Fazer sorteio", 'sortear', class: 'btn btn-default' %>

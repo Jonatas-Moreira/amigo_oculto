@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sorteios</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sorteios.each do |sorteio| %>
+      <tr>
+        <td><%= sorteio.descricao %></td>
+        <td><%= link_to 'Show', sorteio %></td>
+        <td><%= link_to 'Edit', edit_sorteio_path(sorteio) %></td>
+        <td><%= link_to 'Destroy', sorteio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Sorteio', new_sorteio_path, class: 'btn btn-primary' %>
