@@ -14,7 +14,7 @@ As vantagens dessa solução:
 1. **O sorteio é online.** Os participantes não precisam estar no mesmo dia e local
 para a realização do sorteio. Na maneira antiga era um problema conseguir 
 reunir todo mundo para fazer o sorteio;                                  
-2. **Você não precisa engulir papel!** Claro que isso é uma brincadeira e que
+2. **Você não precisa engolir papel!** Claro que isso é uma brincadeira e que
 pouquíssimas pessoas fazem isso de fato, mas o sistema envia o resultado de cada 
 participante por email, que já é protegido por senha.
 3. **O ciclo é perfeito.** Não há riscos de alguém "se-tirar" ou de "eu te tirar e 
@@ -36,16 +36,27 @@ e que quando o sorteio for realizado todos receberão seu "papel".
 
 ##  Como instalar
 
-Primeiro é preciso clinar o projeto: `git clone git://github.com/lucasmncastro/amigo_oculto.git`
+Primeiro é preciso clonar o projeto:
+
+    git clone git://github.com/lucasmncastro/amigo_oculto.git
 
 Entre no diretório do projeto e execute o bundle install, para garantir que todas as gems estão instaladas:
 
-`cd amigo_oculto`
-`bundle install`
+    cd amigo_oculto
+    bundle install
 
-Crie as tabelas no banco de dados: `rake db:migrate`
+Crie as tabelas no banco de dados:
 
-Inicie a aplicação: `rails s`
+    rake db:migrate
+
+Configure as variáveis de ambiente com suas credenciais do Gmail para o envio do resultado do sorteio aos participantes:
+
+    export GMAIL_USERNAME=<seu-email-do-gmail>
+    export GMAIL_PASSWORD=<sua-senha-do-gmail>
+
+Inicie a aplicação:
+
+    rails s
 
 ## Contribuidores
 
