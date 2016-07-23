@@ -11,6 +11,12 @@
   <body>
     <div class="conteudo">
       <h1 class="titulo"><%= link_to "Amigo Oculto", '/' %></h1>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <% if usuario_signed_in? %>
+        <%= link_to "Sair do sistema", destroy_usuario_session_path, method: :delete %>
+      <% end %>
+
       <%= yield %>
     </div>
   </body>

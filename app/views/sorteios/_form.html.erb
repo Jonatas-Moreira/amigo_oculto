@@ -1,4 +1,4 @@
-<%= form_for(sorteio) do |f| %>
+<%= nested_form_for(sorteio) do |f| %>
   <% if sorteio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(sorteio.errors.count, "error") %> prohibited this sorteio from being saved:</h2>
@@ -20,6 +20,18 @@
     <%= f.label :regras %>
     <%= f.text_area :regras, class: 'form-control' %>
   </div>
+
+  <div class="field">
+    <%= f.label :data %>
+    <%= campo_data f, :data %>
+  </div>
+<%= f.fields_for :amigos do |amigo_form| %>
+  <br />
+  <%= amigo_form.text_field :nome, class: '', placeholder: 'Nome' %>
+  <%= amigo_form.text_field :email, class: '', placeholder: 'Email' %>
+  <%= amigo_form.link_to_remove "Remover" %>
+<% end %>
+<p><%= f.link_to_add "Adicionar Amigo", :amigos %></p>
 
   <p style="margin-top: 20px">
     <%= f.submit 'Salvar', class: 'btn btn-primary' %>

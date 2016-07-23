@@ -70,6 +70,8 @@ class SorteiosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sorteio_params
-      params.require(:sorteio).permit(:descricao, :regras)
+      params.require(:sorteio).permit(:descricao, :regras, :data,
+        amigos_attributes: [:id, :nome, :email, :_destroy]
+      )
     end
 end
